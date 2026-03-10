@@ -24,29 +24,30 @@ The goal is to:
 
 ## 📂 Project Structure
 
+```
 LUXURY HOUSING SALES ANALYSIS
 │
 ├── data/
-│ ├── raw/ # Original dataset
-│ └── processed/ # Cleaned dataset
+│   ├── raw/
+│   └── processed/
 │
 ├── scripts/
-│ ├── data_cleaning.py
-│ ├── data_inspection.py
-│ └── load_to_sql.py
+│   ├── data_cleaning.py
+│   ├── data_inspection.py
+│   └── load_to_sql.py
 │
 ├── sql/
-│ ├── 01_table_schema.sql
-│ ├── 02_data_validation.sql
-│ └── 03_aggregation_queries.sql
+│   ├── 01_table_schema.sql
+│   ├── 02_data_validation.sql
+│   └── 03_aggregation_queries.sql
 │
 ├── powerbi/
-│ └── Luxury_Housing_DirectQuery.pbix
+│   └── Luxury_Housing_DirectQuery.pbix
 │
 └── README.md
+```
 
 
----
 
 ## 🔄 Data Pipeline Flow
 
@@ -82,15 +83,19 @@ FROM luxury_housing
 GROUP BY Developer_Name
 ORDER BY Total_Revenue DESC
 LIMIT 5;
+```
 
-Average Price by Micro Market
+### Average Price by Micro Market
+
+```sql
 SELECT Micro_Market,
        AVG(Ticket_Price_Cr) AS Avg_Price
 FROM luxury_housing
 GROUP BY Micro_Market
 ORDER BY Avg_Price DESC;
+```
 
-📊 Power BI Dashboard Features
+## 📊 Power BI Dashboard Features
 
 KPI Cards (Revenue, Avg Price, Units Sold)
 
@@ -104,7 +109,7 @@ Geographic Visualization
 
 DirectQuery live connection to PostgreSQL
 
-🚀 How to Run This Project
+## 🚀 How to Run This Project
 
 Clone repository
 
@@ -118,7 +123,7 @@ Execute validation queries
 
 Open Power BI file and connect to PostgreSQL
 
-🎯 Project Outcome
+## 🎯 Project Outcome
 
 This project demonstrates:
 
