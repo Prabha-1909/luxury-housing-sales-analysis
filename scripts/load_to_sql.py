@@ -36,7 +36,7 @@ with engine.connect() as conn:
 # 🔹 4. Insert data
 df.to_sql("luxury_housing", engine, if_exists="replace", index=False)
 
-print("✅ Data successfully loaded!")
+print(" Data successfully loaded!")
 
 # 🔹 5. Validate
 with engine.connect() as conn:
